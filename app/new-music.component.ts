@@ -4,13 +4,13 @@ import { Music } from './music.model';
 @Component({
   selector: 'new-music',
   template: `
-    <h1>New Music</h1>
+    <h2>New Music</h2>
     <div>
       <label>Enter Artist:</label>
       <input #newArtist>
     </div>
     <div>
-      <button (click)="
+      <button class="btn btn-lg" (click)="
         addClicked(newArtist.value);
         newArtist.value='';
       ">Add</button>

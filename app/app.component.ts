@@ -5,7 +5,7 @@ import { Music } from './music.model';
   selector: 'my-app',
   template: `
   <div class="container">
-    <h1>Angular Music Store</h1>
+    <h1>North West Music</h1>
     <music-list
       [childMusicList]="masterMusicList"
       (clickSender)="showDetails($event)"
