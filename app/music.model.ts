@@ -1,4 +1,4 @@
 export class Music {
-  public inInventory: boolean = false;
+  public done: boolean = false;
   constructor(public artist: string) {   }
 }

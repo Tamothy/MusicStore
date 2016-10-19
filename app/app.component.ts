@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter} from '@angular/core';
+import { Component } from '@angular/core';
 import { Music } from './music.model';
 
 @Component({
@@ -12,10 +12,10 @@ import { Music } from './music.model';
      ></music-list>
     <edit-music
       [childSelectedMusic]="selectedMusic"
-      (inInventoryClickedSender)="finishedEditing()"
+      (doneClickedSender)="finishedEditing()"
     ></edit-music>
     <new-music
-      (newMusicSender)="addMusic($event)"
+      (newSender)="addMusic($event)"
     ></new-music>
   </div>
   `
@@ -26,7 +26,7 @@ export class AppComponent {
       new Music("Five Finger Death Punch"),
       new Music("Nightwish"),
       new Music("Theory of a Deadman"),
-      new Music("Kamelot")
+      new Music("Black Sabbath")
   ];
   selectedMusic: Music = null;
   showDetails(clickedMusic: Music) {

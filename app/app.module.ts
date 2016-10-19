@@ -5,7 +5,7 @@ import { AppComponent }   from './app.component';
 import { MusicListComponent } from './music-list.component';
 import { EditMusicComponent } from './edit-music.component';
 import { NewMusicComponent } from './new-music.component';
-import { InventoryPipe } from './inventory.pipe';
+import { CompletenessPipe } from './completeness.pipe';
 import { MusicComponent } from './music.component';
 
 @NgModule({
@@ -18,7 +18,7 @@ import { MusicComponent } from './music.component';
     MusicListComponent,
     EditMusicComponent,
     NewMusicComponent,
-    InventoryPipe,
+    CompletenessPipe,
     MusicComponent,
   ],
   bootstrap:    [ AppComponent ]

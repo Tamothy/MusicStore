@@ -4,7 +4,7 @@ import { Music } from './music.model';
 @Component({
   selector: 'new-music',
   template: `
-    <h2>New Music</h2>
+    <h1>New Artist</h1>
     <div>
       <label>Enter Artist:</label>
       <input #newArtist>
