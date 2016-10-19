@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { Task } from './task.model';
+import { Music } from './music.model';
 
 @Component({
   selector: 'new-music',
@@ -10,12 +10,9 @@ import { Task } from './task.model';
       <input #newArtist>
     </div>
     <div>
-      <label>Enter Genre:</label>
-      <input #newGenre>
       <button (click)="
-        addClicked(newArtist.value, newGenre.value);
+        addClicked(newArtist.value);
         newArtist.value='';
-        newGenre.value='';
       ">Add</button>
     </div>
   `
@@ -23,8 +20,8 @@ import { Task } from './task.model';
 
 export class NewMusicComponent {
   @Output() newMusicSender = new EventEmitter();
-  addClicked(artist: string, genre: number) {
-    var newMusicToAdd: Task = new Task(artist, genre);
+  addClicked(artist: string) {
+    var newMusicToAdd: Music = new Music(artist);
     this.newMusicSender.emit(newMusicToAdd);
   }
 }

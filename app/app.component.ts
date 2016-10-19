@@ -1,42 +1,41 @@
-import { Component } from '@angular/core';
-import { Task } from './task.model';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
+import { Music } from './music.model';
 
 @Component({
   selector: 'my-app',
   template: `
   <div class="container">
-    <h1>My First Angular 2 App</h1>
-    <pies></pies>
-    <task-list
-      [childTaskList]="masterTaskList"
+    <h1>Angular Music Store</h1>
+    <music-list
+      [childMusicList]="masterMusicList"
       (clickSender)="showDetails($event)"
-     ></task-list>
-    <edit-task
-      [childSelectedTask]="selectedTask"
-      (doneClickedSender)="finishedEditing()"
-    ></edit-task>
-    <new-task
-      (newTaskSender)="addTask($event)"
-    ></new-task>
+     ></music-list>
+    <edit-music
+      [childSelectedMusic]="selectedMusic"
+      (inInventoryClickedSender)="finishedEditing()"
+    ></edit-music>
+    <new-music
+      (newMusicSender)="addMusic($event)"
+    ></new-music>
   </div>
   `
 })
 
 export class AppComponent {
-  public masterTaskList: Task[] = [
-      new Task("Create To-Do List app.", 0),
-      new Task("Learn Kung Fu.", 1),
-      new Task("Rewatch all the Lord of the Rings movies.", 2),
-      new Task("Do the laundry.", 3)
+  public masterMusicList: Music[] = [
+      new Music("Five Finger Death Punch"),
+      new Music("Nightwish"),
+      new Music("Theory of a Deadman"),
+      new Music("Kamelot")
   ];
-  selectedTask: Task = null;
-  showDetails(clickedTask: Task) {
-    this.selectedTask = clickedTask;
+  selectedMusic: Music = null;
+  showDetails(clickedMusic: Music) {
+    this.selectedMusic = clickedMusic;
   }
   finishedEditing() {
-    this.selectedTask = null;
+    this.selectedMusic = null;
   }
-  addTask(newTaskFromChild: Task) {
-    this.masterTaskList.push(newTaskFromChild);
+  addMusic(newMusicFromChild: Music) {
+    this.masterMusicList.push(newMusicFromChild);
   }
 }

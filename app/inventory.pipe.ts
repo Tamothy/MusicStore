@@ -1,32 +1,32 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import {Task} from './task.model';
+import {Music} from './music.model';
 
 @Pipe({
-  name: "completeness",
+  name: "Inventory",
   pure: true
 })
 
 
-export class CompletenessPipe implements PipeTransform {
-  transform(input: Task[], desiredCompleteness) {
-    // console.log(desiredCompleteness);
+export class InventoryPipe implements PipeTransform {
+  transform(input: Music[], desiredInventory) {
+    // console.log(desiredInventory);
     // console.log(word2);
     // console.log(word3);
     // console.log(word4);
     // console.log(word5);
     // console.log(word6);
 
-    var output: Task[] = [];
-    if(desiredCompleteness === "notDone") {
+    var output: Music[] = [];
+    if(desiredInventory === "notInInventory") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].done === false) {
+        if (input[i].inInventory === false) {
           output.push(input[i]);
         }
       }
       return output;
-    } else if (desiredCompleteness === "isDone") {
+    } else if (desiredInventory === "inInventory") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].done === true) {
+        if (input[i].inInventory === true) {
           output.push(input[i]);
         }
       }

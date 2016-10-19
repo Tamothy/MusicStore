@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Task } from './task.model';
+import {Music} from './music.model';
 
 @Component({
   selector: 'edit-music',
@@ -11,18 +11,16 @@ import { Task } from './task.model';
         <input [(ngModel)]="childSelectedMusic.artist">
       </div>
       <div>
-        <label>Enter Genre:</label>
-        <input [(ngModel)]="childSelectedTask.id">
-        <button (click)="doneClicked()">Done</button>
+        <button (click)="inInventoryClicked()">Done</button>
       </div>
     </div>
   `
 })
 
-export class EditTaskComponent {
-  @Input() childSelectedTask: Task;
-  @Output() doneClickedSender = new EventEmitter();
-  doneClicked() {
-    this.doneClickedSender.emit();
+export class EditMusicComponent {
+  @Input() childSelectedMusic: Music;
+  @Output() inInventoryClickedSender = new EventEmitter();
+  inInventoryClicked() {
+    this.inInventoryClickedSender.emit();
   }
 }
