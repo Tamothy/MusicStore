@@ -23,14 +23,15 @@ import { Music } from './music.model';
 
 export class AppComponent {
   public masterMusicList: Music[] = [
-      new Music("Five Finger Death Punch"),
-      new Music("Nightwish"),
-      new Music("Theory of a Deadman"),
-      new Music("Black Sabbath")
+      new Music("Five Finger Death Punch","Wrong Side of Heaven", "2013"),
+      new Music("Nightwish","Bye Bye Beautiful", "2008"),
+      new Music("Theory of a Deadman", "Savages","2014"),
+      new Music("Black Sabbath","Paranoid","1970")
   ];
   selectedMusic: Music = null;
   showDetails(clickedMusic: Music) {
     this.selectedMusic = clickedMusic;
+    console.log(this.masterMusicList);
   }
   finishedEditing() {
     this.selectedMusic = null;

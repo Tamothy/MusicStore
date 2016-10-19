@@ -1,14 +1,30 @@
 h1 {
   text-align: center;
   font-family: 'BioRhyme Expanded', serif;
+  text-shadow: 0px 0px 8px white;
+  color: black;
+  font-size: 50px;
 }
 
+h3 {
+  font-size: 30px;
+  font-family: 'BioRhyme Expanded', serif;
+  text-shadow: 0px 0px 8px white;
+  color: black;
+}
+
+.well label {
+  color:black;
+}
+
+.well {
+  background-color: rgba(211,211,211,0.5);
+}
 body {
   background-image:
   url(https://images.unsplash.com/photo-1475312452884-7ad5751c535d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=9d130f687f8692b584f7e96d4f744b95);
   background-size: cover;
   background-repeat: no-repeat;
-  color: white;
 }
 
 div {
@@ -18,8 +34,14 @@ div {
 
 button {
   background-color: black;
+  color:white;
 }
 
 button:hover {
+ color: black;
+ background-color: white;
+}
 
+label {
+  color:white;
 }

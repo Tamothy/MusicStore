@@ -4,14 +4,18 @@ import { Music } from './music.model';
 @Component({
   selector: 'edit-music',
   template: `
-    <div *ngIf="childSelectedMusic">
-      <h1>Edit Listing</h1>
+    <div *ngIf="childSelectedMusic" class="well">
+      <h3>Edit Listing</h3>
       <div>
         <label>Edit Artist:</label>
         <input [(ngModel)]="childSelectedMusic.artist">
+        <label>Edit Album:</label>
+        <input [(ngModel)]="childSelectedMusic.album">
+        <label>Edit Release Date:</label>
+        <input [(ngModel)]="childSelectedMusic.release">
       </div>
       <div>
-        <button (click)="doneClicked()">Done</button>
+        <button class="btn btn-lg" (click)="doneClicked()">Done</button>
       </div>
     </div>
   `
