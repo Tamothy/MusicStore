@@ -4,17 +4,19 @@ import { Music } from './music.model';
 @Component({
   selector: 'music-display',
   template: `
-  <div class="container">
-    <div class ="row">
-      <div class ="col-sm-4">
+  <div id="music">
       <input *ngIf="music.done === true" type="checkbox" checked (click)="toggleDone(false)"/>
       <input *ngIf="music.done === false" type="checkbox" (click)="toggleDone(true)"/>
+      <div ng-app="myApp" ng-controller="customersCtrl">
+      <table>
+      <tr ng-repeat ="x in music">
       <label>{{ music.artist }}</label><br>
       <label>{{ music.album }}</label><br>
       <label>{{ music.release }}</label><br>
-      <label><img src="{{ music.cover }}"></label><br>
-      <label>{{ music.price }}</label>
-      </div>
+      <label>{{ music.price }}</label><br>
+      </tr>
+      <td><label><img src="{{ music.cover }}"></label></td><br>
+    </table>
     </div>
   </div>
   `
@@ -25,4 +27,5 @@ export class MusicComponent {
     this.music.done = setCompleteness;
     console.log(this.music);
   }
+
 }

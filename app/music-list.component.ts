@@ -11,7 +11,6 @@ import { Music } from './music.model';
   </select>
   <div *ngFor="let currentMusic of childMusicList | completeness:selectedCompleteness">
   <music-display [music]="currentMusic"></music-display>
-
   </div>
   `
 })
