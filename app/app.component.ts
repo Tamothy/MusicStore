@@ -23,10 +23,10 @@ import { Music } from './music.model';
 
 export class AppComponent {
   public masterMusicList: Music[] = [
-      new Music("Five Finger Death Punch","Wrong Side of Heaven", "2013"),
-      new Music("Nightwish","Bye Bye Beautiful", "2008"),
-      new Music("Theory of a Deadman", "Savages","2014"),
-      new Music("Black Sabbath","Paranoid","1970")
+      new Music("Five Finger Death Punch","Wrong Side of Heaven", "2013","https://images-na.ssl-images-amazon.com/images/I/61G5N3uFhhL.jpg","$9.99"),
+      new Music("Nightwish","Dark Passion Play", "2008", "https://upload.wikimedia.org/wikipedia/en/5/5e/Dark_Passion_Play.jpg","$9.99"),
+      new Music("Theory of a Deadman", "Savages","2014", "https://upload.wikimedia.org/wikipedia/en/1/17/Theory_of_a_Deadman_album_cover.jpg","$9.99"),
+      new Music("Black Sabbath","Paranoid","1970", "https://upload.wikimedia.org/wikipedia/en/6/64/Black_Sabbath_-_Paranoid.jpg","$9.99")
   ];
   selectedMusic: Music = null;
   showDetails(clickedMusic: Music) {

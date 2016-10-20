@@ -1,11 +1,11 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Music } from './music.model';
-
+//You can edit your cart here
 @Component({
   selector: 'edit-music',
   template: `
     <div *ngIf="childSelectedMusic" class="well">
-      <h3>Edit Listing</h3>
+      <h3>Edit Cart</h3>
       <div>
         <label>Edit Artist:</label>
         <input [(ngModel)]="childSelectedMusic.artist">

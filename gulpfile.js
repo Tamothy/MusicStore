@@ -16,6 +16,7 @@ var lib = require('bower-files')({
     }
   }
 });
+var app = angular.module('app', ['ui.grid']);
 
 // used for build and clean tasks.
 var utilities = require('gulp-util');
