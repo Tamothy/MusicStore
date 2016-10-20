@@ -5,10 +5,9 @@ import { Music } from './music.model';
 @Component({
   selector: 'music-list',
   template: `
-  <select (change)="onChange($event.target.value)" class="filter">
-  <option value="all">Show Inventory</option>
-  <option value="isDone">Cart</option>
-  </select>
+  <button value ="all" (click)="onChange($event.target.value)" class="filter">Show Inventory
+  </button>
+  <button value="isDone" (click)="onChange($event.target.value)">View Cart</button> <!--we want to view selected music-->
   <div *ngFor="let currentMusic of childMusicList | completeness:selectedCompleteness">
   <music-display [music]="currentMusic"></music-display>
   </div>

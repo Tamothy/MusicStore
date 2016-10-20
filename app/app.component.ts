@@ -5,8 +5,7 @@ import { Music } from './music.model';
   selector: 'my-app',
   template: `
   <div class="container">
-    <h1>North West Music</h1>
-    <h3>You love it, we have it!</h3>
+ <img id="banner" src ="resources/img/banner.png">
     <music-list
       [childMusicList]="masterMusicList"
       (clickSender)="showDetails($event)"
